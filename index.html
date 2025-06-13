@@ -5,10 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>클라이밍 Q&A 피드</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyChJGGzFI2Vs71PL--Y3UtNjEMHitFJvCY",
+      authDomain: "climbing-project-40a9b.firebaseapp.com",
+      projectId: "climbing-project-40a9b",
+      storageBucket: "climbing-project-40a9b.firebasestorage.app",
+      messagingSenderId: "174701520111",
+      appId: "1:174701520111:web:ecf31a7d5df5100bb7a71a"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+  </script>
 </head>
 <body>
   <div class="container">
     <h1>클라이밍 Q&A 피드</h1>
+    <div id="firestore-info"></div>
+    <div id="loading-spinner"></div>
     <form id="question-form">
       <input type="text" id="question-nickname" placeholder="닉네임 (선택)" maxlength="12">
       <input type="text" id="question-input" placeholder="궁금한 점을 입력하세요" required>
