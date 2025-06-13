@@ -193,3 +193,25 @@ h1 {
 .reply-form button:hover {
   background: #4a148c;
 }
+/* Firestore 연동용 로딩 스피너 */
+#loading-spinner {
+  display: none;
+  margin: 40px auto;
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #4caf50;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* Firestore 안내 메시지 */
+#firestore-info {
+  text-align: center;
+  color: #888;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
